@@ -1,4 +1,4 @@
-package bfs_dfs_problems;
+package graphs.bfs_dfs_problems;
 
 import java.util.Arrays;
 import java.util.LinkedList;
