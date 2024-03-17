@@ -19,6 +19,7 @@ public class DistanceOfNearestOneInMatrix {
 
     public static ArrayList<ArrayList<Integer>> nearest(ArrayList<ArrayList<Integer>> mat, int n, int m) {
         //By using queue
+
         int[][] ans = new int[n][m];
         boolean[][] vis = new boolean[n][m];
         Queue<Node> q = new LinkedList<>();
