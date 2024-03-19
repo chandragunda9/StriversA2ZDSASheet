@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15070da5-6d1d-4aa6-90b4-4ac436a695f6" name="Changes" comment="space add">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Strivers_A2Z_DSA_Sheet.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphs/bfs_dfs_problems/CountEventualSafeNodes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphs/bfs_dfs_problems/CycleDetectionInDirectedGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphs/bfs_dfs_problems/TopologicalSorting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphs/bfs_dfs_problems/TopologicalSortingUsingBFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sorting/BubbleSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sorting/SelectionSort.java" afterDir="false" />
+    <list default="true" id="15070da5-6d1d-4aa6-90b4-4ac436a695f6" name="Changes" comment="bfs dfs problems 19 mar, sorting basic commit">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710689994018</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="bfs dfs problems 19 mar, sorting basic commit">
+      <option name="closed" value="true" />
+      <created>1710872204892</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710872204892</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -190,7 +189,8 @@
     <MESSAGE value="graphs bfs/dfs problems  17 march commit" />
     <MESSAGE value="refactor" />
     <MESSAGE value="space add" />
-    <option name="LAST_COMMIT_MESSAGE" value="space add" />
+    <MESSAGE value="bfs dfs problems 19 mar, sorting basic commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="bfs dfs problems 19 mar, sorting basic commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
