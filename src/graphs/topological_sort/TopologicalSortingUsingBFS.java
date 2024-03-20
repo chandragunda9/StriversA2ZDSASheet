@@ -1,4 +1,4 @@
-package graphs.bfs_dfs_problems;
+package graphs.topological_sort;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
