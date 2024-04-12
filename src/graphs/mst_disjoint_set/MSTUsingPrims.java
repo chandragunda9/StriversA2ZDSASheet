@@ -1,4 +1,4 @@
-package graphs.mst;
+package graphs.mst_disjoint_set;
 
 import java.util.*;
 
