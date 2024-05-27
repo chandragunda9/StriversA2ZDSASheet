@@ -4,22 +4,28 @@ import java.util.Arrays;
 
 public class SelectionSort {
     public static void main(String[] args) {
-        int[] arr = {7, 6, 5, 8, 9, 1, 10, 4, 33, 5};
-        selectionSort(arr);
+        int[] arr = {5, 4, 3, 2, 1, 0};
+        selectionSort(arr, arr.length);
         System.out.println(Arrays.toString(arr));
     }
 
-    public static void selectionSort(int[] arr) {
-        int n = arr.length, minIndex = -1;
+    static int select(int arr[], int i) {
+        // code here such that selectionSort() sorts arr[]
+        int minInd = i;
+        for (int j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[minInd])
+                minInd = j;
+        }
+        return minInd;
+    }
+
+    static void selectionSort(int arr[], int n) {
         for (int i = 0; i < n - 1; i++) {
-            minIndex = i;
-            for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minIndex])
-                    minIndex = j;
-            }
+            int minInd = select(arr, i);
+            //swap
             int t = arr[i];
-            arr[i] = arr[minIndex];
-            arr[minIndex] = t;
+            arr[i] = arr[minInd];
+            arr[minInd] = t;
         }
     }
 }
