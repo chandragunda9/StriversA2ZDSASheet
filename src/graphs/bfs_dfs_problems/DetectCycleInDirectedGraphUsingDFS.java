@@ -2,30 +2,32 @@ package graphs.bfs_dfs_problems;
 
 import java.util.ArrayList;
 
-public class DetectCycleInUndirectedGraphUsingDFS {
-
-    public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
+public class DetectCycleInDirectedGraphUsingDFS {
+    public boolean isCyclic(int V, ArrayList<ArrayList<Integer>> adj) {
         boolean[] vis = new boolean[V];
+        boolean[] currVis = new boolean[V];
         for (int i = 0; i < V; i++) {
             if (!vis[i]) {
-                if (dfs(i, -1, vis, adj))
+                if (dfs(i, adj, vis, currVis))
                     return true;
             }
         }
         return false;
     }
 
-    static boolean dfs(int v, int parent, boolean[] vis, ArrayList<ArrayList<Integer>> adj) {
+    static boolean dfs(int v, ArrayList<ArrayList<Integer>> adj, boolean[] vis, boolean[] currVis) {
         vis[v] = true;
+        currVis[v] = true;
         ArrayList<Integer> conn = adj.get(v);
         for (int ele : conn) {
             if (!vis[ele]) {
-                if (dfs(ele, v, vis, adj))
+                if (dfs(ele, adj, vis, currVis))
                     return true;
-            } else if (ele != parent) {
+            } else if (currVis[ele]) {
                 return true;
             }
         }
+        currVis[v] = false;
         return false;
     }
 }
