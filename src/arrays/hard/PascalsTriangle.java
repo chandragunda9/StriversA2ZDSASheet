@@ -12,30 +12,34 @@ public class PascalsTriangle {
         System.out.println(nthRowOfPascalTriangle(nthRow));
     }
 
+    public static List<Integer> generateNthRow(int row) {
+        List<Integer> rowValues = new ArrayList<>();
+        rowValues.add(1);
+        int mul = 1;
+        for (int col = 1; col < row; col++) {
+            mul = mul * (row - col);
+            mul = mul / col;
+            rowValues.add(mul);
+        }
+        return rowValues;
+    }
+
     public static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> ans = new ArrayList<>();
-        for (int i = 0; i < numRows; i++) {
-            List<Integer> temp = new ArrayList<>();
-            temp.add(1);
-            int mul = 1;
-            for (int j = 0; j < i; j++) {
-                mul = mul * (i - j) / (j + 1);
-                temp.add(mul);
-            }
-            ans.add(temp);
+        for (int row = 1; row <= numRows; row++) {
+            ans.add(generateNthRow(row));
         }
         return ans;
     }
 
-    static ArrayList<Long> nthRowOfPascalTriangle(int n) {
+    static ArrayList<Long> nthRowOfPascalTriangle(int row) {
         int mod = (int) (1e9 + 7);
         ArrayList<Long> ans = new ArrayList<>();
         ans.add(1L);
         long mul = 1;
-        int rowInd = n - 1;
-        for (int j = 0; j < rowInd; j++) {
-//            mul = mul * (rowInd - j) / (j + 1);
-            mul = mul * (rowInd - j) % mod * modInverse(j + 1, mod) % mod;
+        for (int col = 1; col < row; col++) {
+            mul = mul * (row - col) % mod;
+            mul = mul * modInverse(col, mod) % mod;
             ans.add(mul);
         }
         return ans;

@@ -12,11 +12,12 @@ public class MajorityElementNBy2 {
         for (int i = 0; i < size; i++) {
             if (count == 0) {
                 ele = a[i];
-            }
-            if (ele == a[i])
+                count = 1;
+            } else if (ele == a[i]) {
                 count++;
-            else
+            } else {
                 count--;
+            }
         }
         count = 0;
         for (int i = 0; i < size; i++) {
